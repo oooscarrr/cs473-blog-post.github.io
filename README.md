@@ -1,0 +1,1 @@
+# Oscar Xue Blog Post for Lecture 12 Intro to Gradients
