@@ -12,7 +12,7 @@ Let $\theta$ be the amount of water per day, $f(\theta)$ be the leaf loss per da
     - Gradually increase resolution around the lowest points.
 3. Analytical model available
     - Compute first and second derivative(gradient);
-    - Local extremum when $f'(\theta)=0$
+    - Local extremum when $f'(\theta)=0.
         - $f''(\theta)>0 \Rightarrow$ minimum;
         - $f''(\theta)<0 \Rightarrow$ maximum.
 4. Model available, but difficult to directly minimize
@@ -21,9 +21,11 @@ Let $\theta$ be the amount of water per day, $f(\theta)$ be the leaf loss per da
 ---
 ## Gradient descent
 Start at $\theta_0$ and iteratively update $\theta$ by
-$$\theta_{t+1} = \theta_t - \alpha f'(\theta_t)$$
-where $\alpha$ is the learning rate that determines how far away is the next itertion.
+$$\theta_{k+1} = \theta_k - \alpha f'(\theta_k)$$
+such that the distance between iterations is determined by the function slope and the learning rate $\alpha$.
+- the gradient determines that the iteration always moves toward the steepest changing direction;
+- The learning rate is a hyperparameter that determines how fast the sequence converges. If $\alpha$ is too small, the sequence converges slowly. If $\alpha$ is too large, the sequence may skip too many points and fail to converge.
 
 ### Newton's method to find local extremum
 A special case of gradient descent with $\alpha= 1/f''(\theta)$, such that
-$$\theta_{t+1} = \theta_t - \frac{f'(\theta_t)}{f''(\theta_t)}$$
+$$\theta_{k+1} = \theta_k - \frac{f'(\theta_k)}{f''(\theta_k)}$$
