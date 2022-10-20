@@ -22,7 +22,7 @@ Let $\theta$ be the amount of water per day, $f(\theta)$ be the leaf loss per da
 ## Gradient descent
 Start at $\theta_0$ and iteratively update $\theta$ by
 $$\theta_{k+1} = \theta_k - \alpha f'(\theta_k)$$
-such that the distance between iterations is determined by the function slope and the learning rate $\alpha$.
+such that the distance between iterations is determined by the function slope and the learning rate $\alpha$. Given a sufficiently small $\alpha$, the algorithm will converge to a local minimum.
 - the gradient determines that the iteration always moves toward the steepest changing direction;
 - The learning rate is a hyperparameter that determines how fast the sequence converges. If $\alpha$ is too small, the sequence converges slowly. If $\alpha$ is too large, the sequence may skip too many points and fail to converge.
 
